@@ -32,12 +32,15 @@ async def lookForIn(json):
    room_availability = roomInfo['availability']
    #
    roomName = roomInfo['name']
-   discount_until = room_commercial_conditions['discountUntil']
-   min_stay_date = room_commercial_conditions['minStayDate']
+   discount_until = room_commercial_conditions['discountUntil'][:-15]
+   min_stay_date = room_commercial_conditions['minStayDate'][:-15]
    discounted_price = room_commercial_conditions['discountedPrice']
-   available_from = room_availability['availableFrom']
+   available_from = room_availability['availableFrom'][:-15]
    #
-   telegram_message = f"{roomName}\nPrice: {discounted_price}€\nUntil: {discount_until[:-15]}\nAvailable from: {available_from[:-15]}\nMin staying: {min_stay_date[:-15]}"
+   if available_from == "2024-08-01":
+      telegram_message = f"The room is still available. Price at {discounted_price}€ until {discount_until}\n---\nMinimum staying date: {min_stay_date}"
+   else:
+      telegram_message = f"The room has been booked :'("
    print(telegram_message)
    sendMessageToBot(telegram_message)
 
