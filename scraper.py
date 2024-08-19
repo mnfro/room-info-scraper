@@ -6,9 +6,7 @@ import time
 
 HOST = "www.dovevivo.it"
 
-ROOM_LIST = ["https://www.dovevivo.it/page-data/it/affitto-stanza-singola-milano-piazza-maria-adelaide-di-savoia/mi-0074-03-a/page-data.json",
-             "https://www.dovevivo.it/page-data/it/affitto-stanza-singola-milano-piazza-maria-adelaide-di-savoia/mi-0074-02-a/page-data.json",
-             "https://www.dovevivo.it/page-data/it/affitto-stanza-singola-milano-via-della-moscova/mi-1347-02-a/page-data.json"]
+ROOM_LIST = ["https://www.dovevivo.it/page-data/it/affitto-stanza-singola-milano-piazza-maria-adelaide-di-savoia/mi-0074-03-a/page-data.json"]
 
 HEADERS = {"Accept":"*/*",
            "Accept-Encoding":"gzip, deflate, br",
